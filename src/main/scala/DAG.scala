@@ -1,4 +1,5 @@
 import platform.common_classes.SparkOp
+import domainA.SparkOpInstance1
 
 object DAG {
   val ops: Set[SparkOp] = Set(
