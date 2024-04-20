@@ -29,7 +29,7 @@ lazy val domainA = (project in file("subdomains/domainA"))
 
 lazy val root = (project in file("."))
   .aggregate(commonClasses, domainA)
-  .dependsOn(commonClasses)
+  .dependsOn(commonClasses, domainA)
   .settings(
     name := "Testing Devin Code Migrations Scala",
     libraryDependencies ++= Seq(
