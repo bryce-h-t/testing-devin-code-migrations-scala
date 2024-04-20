@@ -2,7 +2,7 @@ import platform.common_classes.SparkOp
 
 object DAG {
   val ops: Set[SparkOp] = Set(
-    legacy.SparkOpInstance1,
+    domainA.SparkOpInstance1,
     legacy.SparkOpInstance2,
     legacy.SparkOpInstance3,
     legacy.SparkOpInstance4,
