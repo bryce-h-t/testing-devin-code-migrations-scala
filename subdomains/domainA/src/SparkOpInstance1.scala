@@ -1,8 +1,8 @@
-package legacy
-import org.apache.spark.sql.SparkSession
+package domainA
 
-import platform.common_classes.{Metadata, RunConfigurations, SparkOp}
+import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.{DataFrame, SparkSession}
+import domainA.common_classes.{Metadata, RunConfigurations, SparkOp}
 
 object SparkOpInstance1 extends SparkOp {
   val randomValue: Int = 7345 // Hardcoded random value
@@ -10,8 +10,8 @@ object SparkOpInstance1 extends SparkOp {
   override def name: String = "SparkOpInstance1"
   override def inputs: Set[String] = Set() // No inputs, making it a root
   override def query(inputs: Map[String, DataFrame]): DataFrame = {
-    // Using randomValue from SparkOpInstance20 as instructed
-    val _ = SparkOpInstance20.randomValue
+    // Previously used randomValue from SparkOpInstance20, now using hardcoded value
+    val _ = randomValue
     SparkSession.builder().getOrCreate().emptyDataFrame
   }
   override def metadata: Metadata = {
