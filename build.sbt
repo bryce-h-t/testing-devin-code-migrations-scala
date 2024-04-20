@@ -18,7 +18,8 @@ lazy val commonClasses = (project in file("platform/common-classes"))
 lazy val domainA = (project in file("subdomains/domainA"))
   .settings(
     name := "Domain A",
-    scalaSource in Compile := baseDirectory.value / "subdomains" / "domainA" / "src" / "main" / "scala",
+    Compile / scalaSource := file("/home/ubuntu/testing-devin-code-migrations-scala/subdomains/domainA/src/main/scala"),
+    Compile / target := file("/home/ubuntu/testing-devin-code-migrations-scala/subdomains/domainA/target/scala-2.13/classes"),
     libraryDependencies ++= Seq(
       "org.scalatest" %% "scalatest" % "3.2.9" % Test,
       "org.apache.spark" %% "spark-core" % "3.5.1" % Provided,
