@@ -2,7 +2,7 @@ package domainA
 
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.{DataFrame, SparkSession}
-import domainA.common_classes.{Metadata, RunConfigurations, SparkOp}
+import platform.common_classes.{Metadata, RunConfigurations, SparkOp}
 
 object SparkOpInstance1 extends SparkOp {
   val randomValue: Int = 7345 // Hardcoded random value
